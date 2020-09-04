@@ -1,9 +1,31 @@
 # C++知识
+## 资料
+* [C++ 异常处理](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
+* [gcc,make,cmake](https://blog.csdn.net/libaineu2004/article/details/77119908)
+* [[gcc编译选项](https://www.jianshu.com/p/223d8b6aa879)
+
 ## 命令
 * 查看链接库路径：echo $LD_LIBRARY_PATH
 * 重新加载库：ldconfig /usr/local/lib
 * 查看依赖库：ldd xxx.so
 * 查看符号：nm xxx.so
+
+## core dump
+* [GCC如何产生core dump并定位问题](https://blog.csdn.net/pbymw8iwm/article/details/7035736)
+* gcc -g // 加符号，否则很难定位问题
+
+### 启用
+* Ubuntu运行
+  * 启用apport，service apport start
+  * 默认在当前目录，echo后log在/tmp/core*
+* docker运行
+```
+【log在/tmp/core*】
+1. 宿主机上执行：echo '/tmp/core.%t.%e.%p' | sudo tee /proc/sys/kernel/core_pattern。
+2. docker-compose文件里设置启用GDB工具
+cap_add:
+  - SYS_PTRACE
+```
 
 ### 编译调试
 #### 流程

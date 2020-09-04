@@ -10,8 +10,11 @@ pip install conan=1.17.0
 conan remote add <server_name> <sever_url> // 将远端conan服务器加入本地列表
 conan install . -s arch=x86_64 -s os=Linux -r cloud // Linux初始化
 conan install . -s arch=x86_64 -s os=Windows -r cloud // Windows初始化
-conan upload rapidjson/1.1.0@Common/stable -r cloud --all // 提交
 conan search -r cloud rapidjson/1.1.0@Common/stable // 查看特定库的详细信息
+
+conan export-pkg conanfile.py VTK/8.2.0@Common/stable-debug1 -s arch=x86_64 -s os=Linux -s build_type=Debug -f // 本地打包
+conan upload VTK/8.2.0@Common/stable -r cloud --force --all // 上传提交
+
 ```
 
 ## 资料
