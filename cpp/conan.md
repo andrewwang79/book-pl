@@ -7,7 +7,7 @@ pip install conan=1.17.0
 
 ## 常用命令
 ```
-conan remote add <server_name> <sever_url> // 将远端conan服务器加入本地列表
+conan remote add <server_name> <sever_url> // 将远端conan服务器加入本地列表。conan remote add cloud http://conan.abc.com/artifactory/api/conan/ConanLibraries
 conan install . -s arch=x86_64 -s os=Linux -r cloud // Linux初始化
 conan install . -s arch=x86_64 -s os=Windows -r cloud // Windows初始化
 conan search -r cloud rapidjson/1.1.0@Common/stable // 查看特定库的详细信息

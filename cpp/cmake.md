@@ -12,7 +12,7 @@
 * [列表操作](https://blog.csdn.net/fuyajun01/article/details/9036477)
 
 ### 编译类型
-四种：Debug   Release  RelWithDebInfo MinSizeRel
+四种：Debug Release RelWithDebInfo MinSizeRel
 ```
 两种设置方式：
 cmake -DCMAKE_BUILD_TYPE=Debug ..

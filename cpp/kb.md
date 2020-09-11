@@ -2,13 +2,18 @@
 ## 资料
 * [C++ 异常处理](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
 * [gcc,make,cmake](https://blog.csdn.net/libaineu2004/article/details/77119908)
-* [[gcc编译选项](https://www.jianshu.com/p/223d8b6aa879)
+* [gcc编译选项](https://www.jianshu.com/p/223d8b6aa879)
 
 ## 命令
 * 查看链接库路径：echo $LD_LIBRARY_PATH
 * 重新加载库：ldconfig /usr/local/lib
 * 查看依赖库：ldd xxx.so
 * 查看符号：nm xxx.so
+* 查看文件(执行文件/库)是否是debug版本：readelf -S ri.out |grep debug
+*  查看库路径是否有库：ldconfig -p | grep libGL
+* [Lib文件缺失的通用解决办法](https://www.jianshu.com/p/289205fae296)，查找对应package
+  * dpkg -S /usr/lib/x86_64-linux-gnu/libcuda.so
+  * apt-file search libOpenGL.so
 
 ## core dump
 * [GCC如何产生core dump并定位问题](https://blog.csdn.net/pbymw8iwm/article/details/7035736)
@@ -34,7 +39,7 @@ https://www.cnblogs.com/tinywan/p/7230039.html
 1. 生成Makefile文件
   1. cmake .
   1. configure  
-1. 编译：make -j 8
+1. 编译：make -j8
 1. 安装：make install
 
 #### Linux直接编译程序
