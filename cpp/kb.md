@@ -72,7 +72,7 @@ https://blog.csdn.net/haibosdu/article/details/77094833
 | 项 | 说明 |
 | :-: |  |
 | libc | Linux的标准C库 |
-| glibc | GNU C Library，替代了libc。Linux中最底层的API |
+| [glibc](https://blog.csdn.net/xiaoxinyu316/article/details/44917561) | GNU C Library，替代了libc。Linux中最底层的API |
 | libstdc++ | C++标准库，和gcc配套 |
 
 ### boost

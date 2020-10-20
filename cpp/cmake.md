@@ -6,9 +6,10 @@
 ### 编译类型
 四种：Debug Release RelWithDebInfo MinSizeRel
 ```
-两种设置方式：
-cmake -DCMAKE_BUILD_TYPE=Debug ..
+设置方式：
+cmake -DCMAKE_BUILD_TYPE=Debug .
 SET(CMAKE_BUILD_TYPE "Debug”)
+
 相关参数设置：
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
@@ -16,6 +17,11 @@ SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 ## [动态库静态库](https://www.cnblogs.com/zhoug2020/p/5904206.html)
 ```
+设置方式：
+cmake -DBUILD_SHARED_LIBS=true
+set(BUILD_SHARED_LIBS ON)
+
+同时生成：
 ADD_LIBRARY (hello SHARED ${LIBHELLO_SRC})
 ADD_LIBRARY (hello_static STATIC ${LIBHELLO_SRC})
 SET_TARGET_PROPERTIES (hello_static PROPERTIES OUTPUT_NAME "hello")
@@ -42,9 +48,12 @@ endforeach()
 ```
 
 ## 资料
+* [CMakeLists.txt编写常用命令](https://www.cnblogs.com/xl2432/p/11225276.html)!
 * [CMAKE介绍](https://www.hahack.com/codes/cmake/)
 * [cmake使用示例与整理总结](https://blog.csdn.net/wzzfeitian/article/details/40963457)
-* [CMAKE自定义模块](https://www.kancloud.cn/itfanr/cmake-practice/82991)
-* [cmake指令详解](https://blog.csdn.net/bytxl/article/details/50635016)
 * [cmake常用工程示例大集合](https://blog.csdn.net/FreeApe/article/details/52567087)
+
+* [cmake命令速查手册](https://blog.csdn.net/u010552731/article/details/89293101)
+* [cmake指令详解](https://blog.csdn.net/bytxl/article/details/50635016)
+* [CMAKE自定义模块](https://www.kancloud.cn/itfanr/cmake-practice/82991)
 * [列表操作](https://blog.csdn.net/fuyajun01/article/details/9036477)
