@@ -57,3 +57,7 @@ endforeach()
 * [cmake指令详解](https://blog.csdn.net/bytxl/article/details/50635016)
 * [CMAKE自定义模块](https://www.kancloud.cn/itfanr/cmake-practice/82991)
 * [列表操作](https://blog.csdn.net/fuyajun01/article/details/9036477)
+
+### 指令
+* [configure_file](https://www.cnblogs.com/the-capricornus/p/4717566.html)
+* [generate_export_header](https://www.bookset.io/read/CMake-Cookbook/content-chapter10-10.2-chinese.md)

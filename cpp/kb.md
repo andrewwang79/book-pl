@@ -1,8 +1,12 @@
 # C++知识
 ## 资料
 * [C++ 异常处理](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
+* [C和C++互调用](https://zhuanlan.zhihu.com/p/123269132)
+
+### 编译
 * [gcc,make,cmake](https://blog.csdn.net/libaineu2004/article/details/77119908)
 * [gcc编译选项](https://www.jianshu.com/p/223d8b6aa879)
+* [Linux下gcc编译控制动态库导出函数小结](https://developer.aliyun.com/article/243843)：导出部分接口函数
 
 ## 命令
 * 查看链接库路径：echo $LD_LIBRARY_PATH
