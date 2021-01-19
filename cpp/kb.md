@@ -3,11 +3,6 @@
 * [C++ 异常处理](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
 * [C和C++互调用](https://zhuanlan.zhihu.com/p/123269132)
 
-### 编译
-* [gcc,make,cmake](https://blog.csdn.net/libaineu2004/article/details/77119908)
-* [gcc编译选项](https://www.jianshu.com/p/223d8b6aa879)
-* [Linux下gcc编译控制动态库导出函数小结](https://developer.aliyun.com/article/243843)：导出部分接口函数
-
 ## 命令
 * 查看链接库路径：echo $LD_LIBRARY_PATH
 * 重新加载库：ldconfig /usr/local/lib
@@ -19,25 +14,13 @@
   * dpkg -S /usr/lib/x86_64-linux-gnu/libcuda.so
   * apt-file search libOpenGL.so
 
-## core dump
-* [GCC如何产生core dump并定位问题](https://blog.csdn.net/pbymw8iwm/article/details/7035736)
-* gcc -g // 加符号，否则很难定位问题
+### 编译
+* [gcc,make,cmake](https://blog.csdn.net/libaineu2004/article/details/77119908)
+* [gcc编译选项](https://www.jianshu.com/p/223d8b6aa879)
+* [Linux下gcc编译控制动态库导出函数小结](https://developer.aliyun.com/article/243843)：导出部分接口函数
 
-### 启用
-* Ubuntu运行
-  * 启用apport，service apport start
-  * 默认在当前目录，echo后log在/tmp/core*
-* docker运行
-```
-【log在/tmp/core*】
-1. 宿主机上执行：echo '/tmp/core.%t.%e.%p' | sudo tee /proc/sys/kernel/core_pattern。
-2. docker-compose文件里设置启用GDB工具
-cap_add:
-  - SYS_PTRACE
-```
-
-### 编译调试
-#### 流程
+## 编译
+### 流程
 https://www.cnblogs.com/tinywan/p/7230039.html
 1. 安装依赖库：conan install
 1. 生成Makefile文件
@@ -46,7 +29,7 @@ https://www.cnblogs.com/tinywan/p/7230039.html
 1. 编译：make -j8
 1. 安装：make install
 
-#### Linux直接编译程序
+### Linux直接编译程序
 ```
 cd 代码目录conan install . -s arch=x86_64 -s os=Linux -r cloud --update
 conan install ../ -s arch=x86_64 -s os=Linux -s build_type=Debug -r cloud --update
@@ -54,9 +37,9 @@ cmake .
 make -j 8
 ```
 
-#### 在Windows开发调试Linux上运行的程序
+### 在Windows开发调试Linux上运行的程序
 
-#### 库调用无效的解决
+### 库调用无效的解决
 ```
 nm -D baseLib1.so 查看symbol
 symbol找不到(有，但加了装饰)的解决：
@@ -64,6 +47,32 @@ symbol找不到(有，但加了装饰)的解决：
 extern "C" {
 double power1(double base, int exponent);
 }
+```
+
+## 调试
+* [gdb](https://www.cnblogs.com/sting2me/p/7745551.html)
+* [五种利用strace查故障的简单方法](https://blog.csdn.net/csdn265/article/details/70050168)
+* docker-compose文件里设置启用GDB工具
+```
+cap_add:
+  - SYS_PTRACE
+```
+
+## core dump
+* [GCC如何产生core dump并定位问题](https://blog.csdn.net/pbymw8iwm/article/details/7035736)
+* gcc -g // 加调试符号，否则很难定位问题
+
+### 启用dump
+* Ubuntu
+  1. ulimit -c unlimited
+  1. [废弃步骤]启用apport，service apport start
+  1. 调整core文件到/tmp/core，默认是当前目录：echo '/tmp/core.%t.%e.%p' | sudo tee /proc/sys/kernel/core_pattern
+* docker：core文件在/tmp/core*
+  1. 执行宿主机的第一步和第三步
+
+### 调试
+```
+gdb 程序 coredump文件
 ```
 
 ## 开发规范

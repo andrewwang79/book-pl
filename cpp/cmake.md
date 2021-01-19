@@ -1,4 +1,8 @@
 # CMAKE
+## 调用
+* https://cmake.org/cmake/help/v3.14/manual/cmake.1.html
+* cmake -S 代码目录 -B build目录 -G 编译软件 -D参数名称=参数值
+
 ## 用法
 * MESSAGE( STATUS "SOURCE_FILES = ${SOURCE_FILES}.") // 提示信息
 * list(REMOVE_ITEM ${CONAN_LIBS_RELEASE} "aaa") // 移除列表项
@@ -48,7 +52,7 @@ endforeach()
 ```
 
 ## 资料
-* [CMakeLists.txt编写常用命令](https://www.cnblogs.com/xl2432/p/11225276.html)!
+* [CMakeLists.txt编写常用命令](https://www.cnblogs.com/xl2432/p/11225276.html)
 * [CMAKE介绍](https://www.hahack.com/codes/cmake/)
 * [cmake使用示例与整理总结](https://blog.csdn.net/wzzfeitian/article/details/40963457)
 * [cmake常用工程示例大集合](https://blog.csdn.net/FreeApe/article/details/52567087)
