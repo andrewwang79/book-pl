@@ -1,5 +1,9 @@
 # C++知识
 ## 资料
+* [Linux下Fork与Exec使用](https://www.cnblogs.com/alantu2018/p/8462513.html)
+* [fork出的子进程和父进程](https://blog.csdn.net/u013851082/article/details/76902046)
+* [exec系列函数（execl,execlp,execle,execv,execvp)使用](https://www.cnblogs.com/mickole/p/3187409.html)
+* [fork与僵尸进程](http://shzhangji.com/cnblogs/2013/03/27/fork-and-zombie-process/)
 * [C++ 异常处理](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
 * [C和C++互调用](https://zhuanlan.zhihu.com/p/123269132)
 
