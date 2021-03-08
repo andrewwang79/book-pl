@@ -3,6 +3,13 @@
 * https://cmake.org/cmake/help/v3.14/manual/cmake.1.html
 * cmake -S 代码目录 -B build目录 -G 编译软件 -D参数名称=参数值
 
+## 参数
+| 参数 | 编码 | 值 | 说明 |
+| :-: | - | - | - |
+| 编译bit | CMAKE_GENERATOR_PLATFORM | x86 x64 | -DCMAKE_GENERATOR_PLATFORM=x64 |
+| 编译类型 | CMAKE_BUILD_TYPE | Debug Release RelWithDebInfo MinSizeRel | -DCMAKE_BUILD_TYPE=Debug |
+| 动态库编译 | BUILD_SHARED_LIBS | boolean | -DBUILD_SHARED_LIBS=true |
+
 ## 用法
 * MESSAGE( STATUS "SOURCE_FILES = ${SOURCE_FILES}.") // 提示信息
 * list(REMOVE_ITEM ${CONAN_LIBS_RELEASE} "aaa") // 移除列表项
