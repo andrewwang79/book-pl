@@ -6,8 +6,13 @@ go：替代C的最佳人选
 1. 包管理体系，能出来生态，C++很尴尬
 
 # 资料
+* https://draveness.me/golang/
 * https://chai2010.cn/advanced-go-programming-book/
 * https://juejin.im/post/6844904008893595661
+
+## 框架和库
+* [micro](https://github.com/micro/micro)
+* [goframe](https://goframe.org/pages/viewpage.action?pageId=1114399)
 
 # 使用
 go run test.go
