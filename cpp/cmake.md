@@ -11,8 +11,25 @@
 | 动态库编译 | BUILD_SHARED_LIBS | boolean | -DBUILD_SHARED_LIBS=true |
 
 ## 用法
-* MESSAGE( STATUS "SOURCE_FILES = ${SOURCE_FILES}.") // 提示信息
-* list(REMOVE_ITEM ${CONAN_LIBS_RELEASE} "aaa") // 移除列表项
+```
+// 提示信息
+MESSAGE( STATUS "SOURCE_FILES = ${SOURCE_FILES}.")
+
+// 移除列表项
+list(REMOVE_ITEM ${CONAN_LIBS_RELEASE} "aaa")
+
+// 设置Windows的PDB文件输出路径
+set(COMPILE_PDB_OUTPUT_DIRECTORY "")
+
+ // 设置库文件输出路径，cmake不同版本不一样
+set(LIBRARY_OUTPUT_PATH "")
+
+// 编译类型判断
+IF (CMAKE_BUILD_TYPE STREQUAL Debug)
+ELSE()
+ENDIF()
+
+```
 
 ### 编译类型
 四种：Debug Release RelWithDebInfo MinSizeRel
