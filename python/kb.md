@@ -26,3 +26,20 @@ for file in fnmatch.filter(files, '*.py'):
 path=os.path.join(root,file)
 ```
 * 执行命令：ret = os.system('ping %s' % (ip))
+
+## 单元测试
+```
+import unittest
+
+from pilib.src.util import pi_security
+
+class Test(unittest.TestCase):
+    def test_sha1_file(self):
+        self.assertEqual('6d518be97631a3cb58fe30eab7a7e3c017a23ca7', pi_security.sha1_file('../data/_series.txt'))
+
+    def test_byte_hex(self):
+        self.assertEqual('786D616E', pi_security.byte_hex(b'xman'))
+
+if __name__ == "__main__":
+    unittest.main()
+```
