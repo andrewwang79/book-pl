@@ -6,7 +6,7 @@
 * [函数注释](https://blog.csdn.net/liang19890820/article/details/74264380)
 * [一篇文章搞懂Python中的进程和线程](http://yangcongchufang.com/%E9%AB%98%E7%BA%A7python%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/python-process-thread.html)
 * [Python多进程使用](https://www.cnblogs.com/weiman3389/p/6044936.html)
-
+* 某些编辑器运行时找不到系统模块，如pandas：设置系统变量PYTHONPATH="\Python\Python38\Lib\site-packages"
 ## 日志
 * [python logging日志模块以及多进程日志](http://python.jobbole.com/87300/)，多进程时rotating会在切换时异常
 * [log](http://www.zlovezl.cn/articles/replacing-print-simple-introduction-to-logging/)
