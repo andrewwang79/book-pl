@@ -8,7 +8,8 @@
   * [知识](csharp/kb.md)
 * Python
   * [知识](python/kb.md)
-  * [使用](python/usage.md)
+  * [调用其他语言](python/invoke.md)
+  * [安装](python/install.md)
 * go
   * [介绍](go/README.md)
 * app

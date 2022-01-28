@@ -1,4 +1,4 @@
-# Python
+# 安装
 
 ## 安装
 1. [CentOS安装Python3.6](http://blog.csdn.net/u011404495/article/details/54883310)
