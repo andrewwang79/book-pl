@@ -17,6 +17,9 @@
 * [21天pandas入门手册(1) - 10分钟入门1](https://www.jianshu.com/p/d630c14d3ea0)
 * [shutil文件操作](https://www.jianshu.com/p/b4c87aa6fd24)
 
+## numpy
+* [numpy.array](https://blog.csdn.net/sinat_34474705/article/details/74458605)
+
 ## 语法
 * json字段检查 : if 'data' in result:
 * 变量存在 : if data:
