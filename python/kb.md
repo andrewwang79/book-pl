@@ -54,3 +54,13 @@ class Test(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
+
+## debug
+* 通过临时文件调试别人代码，输出过程信息
+
+```
+file_path = '12345678.txt'
+with open(file_path, mode='w', encoding='utf-8') as file_obj:
+    file_obj.write('你好，Python！')
+    file_obj.write(var1)
+```
