@@ -32,11 +32,18 @@ path=os.path.join(root,file)
 ```
 * 执行命令：ret = os.system('ping %s' % (ip))
 * 函数默认值(1是默认值)：def fn(param1 = 1):
+* string.strip('\'"')
 
 ### 集合操作
 * [列表和字典](https://pythonmana.com/2021/06/20210628184617643E.html)
 * [列表遍历](https://blog.csdn.net/whatday/article/details/100557888)
 * 遍历int转换成str：num_list_new = [str(x) for x in num_list]
+
+### 导入方法
+```
+sys.path.append('./dir/') # 指定绝对/相对路径加入到Python系统路径
+from dir.PyFileName import PyClass # 导入下级目录的类，路径其实可以相对“Python系统路径”的
+```
 
 ## 单元测试
 ```
